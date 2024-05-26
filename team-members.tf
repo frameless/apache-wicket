@@ -3,10 +3,12 @@ resource "github_team_members" "frameless-admin" {
 
   members {
     username = data.github_user.yolijn.username
+    role     = "maintainer"
   }
 
   members {
     username = data.github_user.robbert.username
+    role     = "maintainer"
   }
 }
 
@@ -51,10 +53,12 @@ resource "github_team_members" "frameless-everyone" {
 
   members {
     username = data.github_user.robbert.username
+    role     = "maintainer"
   }
 
   members {
     username = data.github_user.yolijn.username
+    role     = "maintainer"
   }
 }
 
@@ -67,10 +71,12 @@ resource "github_team_members" "frameless-iso27001" {
 
   members {
     username = data.github_user.robbert.username
+    role     = "maintainer"
   }
 
   members {
     username = data.github_user.yolijn.username
+    role     = "maintainer"
   }
 }
 
