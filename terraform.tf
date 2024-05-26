@@ -12,7 +12,7 @@ resource "github_repository" "terraform" {
   has_wiki                    = false
   vulnerability_alerts        = true
   homepage_url                = "https://app.terraform.io/app/frameless/workspaces"
-  visibility                  = "public"
+  visibility                  = "private"
   squash_merge_commit_title   = "PR_TITLE"
   squash_merge_commit_message = "PR_BODY"
 
