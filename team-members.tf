@@ -3,12 +3,10 @@ resource "github_team_members" "frameless-admin" {
 
   members {
     username = data.github_user.yolijn.username
-    role     = "admin"
   }
 
   members {
     username = data.github_user.robbert.username
-    role     = "admin"
   }
 }
 
