@@ -28,6 +28,12 @@ resource "github_team" "frameless-iso27001" {
   }
 }
 
+resource "github_team" "frameless-terraform" {
+  name        = "terraform"
+  description = "Terraform contributors in Frameless"
+  privacy     = "closed"
+}
+
 resource "github_team" "frameless-utrecht-pdc" {
   name           = "frameless-utrecht-pdc"
   parent_team_id = github_team.frameless-everyone.id

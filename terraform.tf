@@ -64,4 +64,9 @@ resource "github_repository_collaborators" "terraform" {
     permission = "admin"
     team_id    = github_team.frameless-admin.slug
   }
+
+  team {
+    permission = "push"
+    team_id    = github_team.frameless-terraform.slug
+  }
 }

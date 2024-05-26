@@ -62,6 +62,18 @@ resource "github_team_members" "frameless-everyone" {
   }
 }
 
+resource "github_team_members" "frameless-terraform" {
+  team_id = github_team.frameless-terraform.id
+
+  members {
+    username = data.github_user.bryan-de-jong.username
+  }
+
+  members {
+    username = data.github_user.ali-kadhim.username
+  }
+}
+
 resource "github_team_members" "frameless-iso27001" {
   team_id = github_team.frameless-iso27001.id
 
