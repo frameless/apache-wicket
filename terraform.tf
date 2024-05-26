@@ -45,7 +45,7 @@ resource "github_branch_protection" "terraform-main" {
   required_status_checks {
     # Require branches to be up to date before merging
     strict   = true
-    contexts = ["Autosquash before merging"]
+    contexts = ["Autosquash before merging", "Terraform Cloud/frameless/repo-id-3Jh2R1aBjant1oW7"]
   }
 
   required_pull_request_reviews {
