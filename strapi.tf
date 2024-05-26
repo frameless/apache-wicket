@@ -85,4 +85,21 @@ resource "github_repository_collaborators" "strapi" {
     permission = "triage"
     team_id    = github_team.external-utrecht-pdc.slug
   }
+
+  # Outside collaborators
+
+  user {
+    permission = "triage"
+    username   = data.github_user.external-jeroen-du-chatinier.username
+  }
+
+  user {
+    permission = "triage"
+    username   = data.github_user.external-rene-olling.username
+  }
+
+  user {
+    permission = "triage"
+    username   = data.github_user.external-utrecht-devops.username
+  }
 }

@@ -127,21 +127,3 @@ resource "github_team_members" "frameless-utrecht-pdc-maintainer" {
     username = data.github_user.ali-kadhim.username
   }
 }
-
-# External teams
-
-resource "github_team_members" "external-utrecht-pdc" {
-  team_id = github_team.external-utrecht-pdc.id
-
-  members {
-    username = data.github_user.external-jeroen-du-chatinier.username
-  }
-
-  members {
-    username = data.github_user.external-rene-olling.username
-  }
-
-  members {
-    username = data.github_user.external-utrecht-devops.username
-  }
-}
