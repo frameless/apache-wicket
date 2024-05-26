@@ -36,27 +36,27 @@ resource "github_team" "frameless-utrecht-pdc" {
 }
 
 resource "github_team" "frameless-utrecht-pdc-developer" {
-  name           = "frameless-utrecht-pdc"
+  name           = "frameless-utrecht-pdc-developer"
   parent_team_id = github_team.frameless-utrecht-pdc.id
   description    = "Frameless developers for Gemeente Utrecht PDC project"
   privacy        = "closed"
 }
 
 resource "github_team" "frameless-utrecht-pdc-maintainer" {
-  name           = "frameless-utrecht-pdc"
+  name           = "frameless-utrecht-pdc-maintainer"
   parent_team_id = github_team.frameless-utrecht-pdc-developer.id
   description    = "Frameless maintainers for Gemeente Utrecht PDC project"
   privacy        = "closed"
 }
 
 resource "github_team" "external-utrecht" {
-  name        = "utrecht"
+  name        = "external-utrecht"
   description = "Gemeente Utrecht"
   privacy     = "closed"
 }
 
 resource "github_team" "external-utrecht-pdc" {
-  name           = "utrecht"
+  name           = "external-utrecht-pdc"
   parent_team_id = github_team.external-utrecht.id
   description    = "Gemeente Utrecht - contributors to the PDC project"
   privacy        = "closed"
