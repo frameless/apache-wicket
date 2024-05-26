@@ -3,7 +3,7 @@ terraform {
     organization = "frameless"
 
     workspaces {
-      name = "github"
+      name = "terraform"
     }
   }
 
