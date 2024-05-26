@@ -73,3 +73,57 @@ resource "github_team_members" "frameless-iso27001" {
     username = data.github_user.yolijn.username
   }
 }
+
+resource "github_team_members" "frameless-utrecht-pdc" {
+  team_id = github_team.frameless-utrecht-pdc.id
+
+  members {
+    username = data.github_user.angela-imhof.username
+  }
+}
+
+resource "github_team_members" "frameless-utrecht-pdc-developer" {
+  team_id = github_team.frameless-utrecht-pdc-developer.id
+
+  members {
+    username = data.github_user.bryan-de-jong.username
+  }
+
+  members {
+    username = data.github_user.mees-post.username
+  }
+
+  members {
+    username = data.github_user.rowan-van-laar.username
+  }
+
+  members {
+    username = data.github_user.savi-sepulveda-martinez.username
+  }
+}
+
+resource "github_team_members" "frameless-utrecht-pdc-maintainer" {
+  team_id = github_team.frameless-utrecht-pdc-maintainer.id
+
+  members {
+    username = data.github_user.ali-kadhim.username
+  }
+}
+
+# External teams
+
+resource "github_team_members" "external-utrecht-pdc" {
+  team_id = github_team.external-utrecht-pdc.id
+
+  members {
+    username = data.github_user.external-jeroen-du-chatinier.username
+  }
+
+  members {
+    username = data.github_user.external-rene-olling.username
+  }
+
+  members {
+    username = data.github_user.external-utrecht-devops.username
+  }
+}

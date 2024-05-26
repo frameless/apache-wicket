@@ -1,3 +1,5 @@
+# Internal users
+
 data "github_user" "ali-kadhim" {
   username = "AliKdhim87"
 }
@@ -38,3 +40,18 @@ data "github_user" "yolijn" {
   username = "Yolijn"
 }
 
+# External users
+# For clarity, it is important to start all IDs with "external-"
+
+data "github_user" "external-jeroen-du-chatinier" {
+  username = "JeroenduC"
+}
+
+data "github_user" "external-rene-olling" {
+  username = "Ollie-nl"
+}
+
+data "github_user" "external-utrecht-devops" {
+  # Utrecht DevOps uses this user to download Docker images
+  username = "supportvcg"
+}
