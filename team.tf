@@ -19,7 +19,7 @@ resource "github_team" "frameless-admin" {
 }
 
 resource "github_team" "frameless-iso27001" {
-  name        = "admin"
+  name        = "iso27001"
   description = "ISO 27001 contributors in Frameless"
   privacy     = "closed"
 
