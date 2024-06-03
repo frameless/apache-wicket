@@ -25,7 +25,7 @@ resource "github_branch_protection" "strapi-main" {
   repository_id = github_repository.strapi.node_id
 
   pattern                         = "main"
-  enforce_admins                  = true
+  enforce_admins                  = false
   allows_deletions                = false
   require_signed_commits          = false
   required_linear_history         = true
@@ -40,6 +40,7 @@ resource "github_branch_protection" "strapi-main" {
     push_allowances = [
       "${data.github_organization.frameless.orgname}/${github_team.frameless-admin.name}",
       "${data.github_organization.frameless.orgname}/${github_team.frameless-utrecht-pdc-maintainer.name}",
+      data.github_user.frameless-devops.username
     ]
   }
 
