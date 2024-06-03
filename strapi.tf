@@ -40,7 +40,7 @@ resource "github_branch_protection" "strapi-main" {
     push_allowances = [
       "${data.github_organization.frameless.orgname}/${github_team.frameless-admin.name}",
       "${data.github_organization.frameless.orgname}/${github_team.frameless-utrecht-pdc-maintainer.name}",
-      data.github_user.frameless-devops.username
+      "/${data.github_user.frameless-devops.username}"
     ]
   }
 
