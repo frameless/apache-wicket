@@ -12,6 +12,10 @@ data "github_user" "bryan-de-jong" {
   username = "bddjong"
 }
 
+data "github_user" "frameless-devops" {
+  username = "frameless-devops"
+}
+
 data "github_user" "marwa-hello" {
   username = "Marwaxhello"
 }

@@ -10,6 +10,11 @@ resource "github_team_members" "frameless-admin" {
     username = data.github_user.robbert.username
     role     = "maintainer"
   }
+
+  members {
+    username = data.github_user.frameless-devops.username
+    role     = "maintainer"
+  }
 }
 
 resource "github_team_members" "frameless-everyone" {
@@ -25,10 +30,16 @@ resource "github_team_members" "frameless-everyone" {
 
   members {
     username = data.github_user.angela-imhof.username
+
   }
 
   members {
     username = data.github_user.bryan-de-jong.username
+  }
+
+  members {
+    username = data.github_user.frameless-devops.username
+    role     = "maintainer"
   }
 
   members {
