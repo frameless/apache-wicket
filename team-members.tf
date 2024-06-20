@@ -103,6 +103,24 @@ resource "github_team_members" "frameless-iso27001" {
   }
 }
 
+resource "github_team_members" "frameless-iso27001-data" {
+  team_id = github_team.frameless-iso27001-data.id
+
+  members {
+    username = data.github_user.angela-imhof.username
+  }
+
+  members {
+    username = data.github_user.robbert.username
+    role     = "maintainer"
+  }
+
+  members {
+    username = data.github_user.yolijn.username
+    role     = "maintainer"
+  }
+}
+
 resource "github_team_members" "frameless-utrecht-pdc" {
   team_id = github_team.frameless-utrecht-pdc.id
 

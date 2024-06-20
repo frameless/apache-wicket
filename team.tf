@@ -28,6 +28,16 @@ resource "github_team" "frameless-iso27001" {
   }
 }
 
+resource "github_team" "frameless-iso27001-data" {
+  name        = "iso27001"
+  description = "ISO 27001 sensitive data contributors in Frameless"
+  privacy     = "closed"
+
+  lifecycle {
+    prevent_destroy = true
+  }
+}
+
 resource "github_team" "frameless-terraform" {
   name        = "terraform"
   description = "Terraform contributors in Frameless"
