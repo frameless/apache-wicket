@@ -29,7 +29,7 @@ resource "github_team" "frameless-iso27001" {
 }
 
 resource "github_team" "frameless-iso27001-data" {
-  name        = "iso27001"
+  name        = "iso27001-data"
   description = "ISO 27001 sensitive data contributors in Frameless"
   privacy     = "closed"
 
