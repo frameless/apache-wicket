@@ -43,10 +43,6 @@ resource "github_team_members" "frameless-everyone" {
   }
 
   members {
-    username = data.github_user.marwa-hello.username
-  }
-
-  members {
     username = data.github_user.mees-post.username
   }
 
