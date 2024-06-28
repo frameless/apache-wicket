@@ -28,10 +28,6 @@ data "github_user" "rowan-van-laar" {
   username = "scar055"
 }
 
-data "github_user" "tessa-viergever" {
-  username = "TessaViergever"
-}
-
 data "github_user" "robbert" {
   username = "Robbert"
 }

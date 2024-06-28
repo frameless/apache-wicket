@@ -55,10 +55,6 @@ resource "github_team_members" "frameless-everyone" {
   }
 
   members {
-    username = data.github_user.tessa-viergever.username
-  }
-
-  members {
     username = data.github_user.robbert.username
     role     = "maintainer"
   }
