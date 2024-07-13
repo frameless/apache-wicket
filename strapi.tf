@@ -50,8 +50,6 @@ resource "github_branch_protection" "strapi-main" {
   }
 
   required_status_checks {
-    # Require branches to be up to date before merging
-    strict   = true
     contexts = ["continuous-integration", "continuous-deployment"]
   }
 
