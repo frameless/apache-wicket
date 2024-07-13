@@ -16,6 +16,11 @@ resource "github_repository" "strapi" {
   squash_merge_commit_title   = "PR_TITLE"
   squash_merge_commit_message = "PR_BODY"
 
+  pages {
+    build_type = "workflow"
+    cname      = "cms.frameless.io"
+  }
+
   lifecycle {
     prevent_destroy = true
   }
