@@ -11,7 +11,7 @@ resource "github_repository" "strapi" {
   has_projects                = true
   has_wiki                    = false
   vulnerability_alerts        = true
-  homepage_url                = "https://loket.digitaal.utrecht.nl/"
+  homepage_url                = "https://cms.frameless.io/"
   visibility                  = "public"
   squash_merge_commit_title   = "PR_TITLE"
   squash_merge_commit_message = "PR_BODY"
