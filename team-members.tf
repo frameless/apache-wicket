@@ -51,10 +51,6 @@ resource "github_team_members" "frameless-everyone" {
   }
 
   members {
-    username = data.github_user.rowan-van-laar.username
-  }
-
-  members {
     username = data.github_user.robbert.username
     role     = "maintainer"
   }
@@ -130,10 +126,6 @@ resource "github_team_members" "frameless-utrecht-pdc-developer" {
 
   members {
     username = data.github_user.mees-post.username
-  }
-
-  members {
-    username = data.github_user.rowan-van-laar.username
   }
 
   members {

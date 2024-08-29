@@ -24,10 +24,6 @@ data "github_user" "savi-sepulveda-martinez" {
   username = "savitris"
 }
 
-data "github_user" "rowan-van-laar" {
-  username = "scar055"
-}
-
 data "github_user" "robbert" {
   username = "Robbert"
 }
