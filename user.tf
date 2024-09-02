@@ -16,6 +16,10 @@ data "github_user" "frameless-devops" {
   username = "frameless-devops"
 }
 
+data "github_user" "marwa-hello" {
+  username = "Marwaxhello"
+}
+
 data "github_user" "mees-post" {
   username = "MeesoPost"
 }
