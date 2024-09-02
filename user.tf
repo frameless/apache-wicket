@@ -47,3 +47,7 @@ data "github_user" "external-utrecht-devops" {
   # Utrecht DevOps uses this user to download Docker images
   username = "supportvcg"
 }
+
+data "github_user" "tessa-viergever" {
+  username = "TessaViergever"
+}
