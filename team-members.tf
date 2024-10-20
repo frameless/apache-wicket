@@ -17,6 +17,15 @@ resource "github_team_members" "frameless-admin" {
   }
 }
 
+resource "github_team_members" "frameless-ci" {
+  team_id = github_team.frameless-ci.id
+
+  members {
+    username = data.github_user.frameless-devops.username
+    role     = "maintainer"
+  }
+}
+
 resource "github_team_members" "frameless-everyone" {
   team_id = github_team.frameless-everyone.id
 
