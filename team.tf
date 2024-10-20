@@ -19,7 +19,7 @@ resource "github_team" "frameless-admin" {
 }
 
 resource "github_team" "frameless-ci" {
-  name        = "admin"
+  name        = "ci"
   description = "Continuous Integration automations of Frameless"
   privacy     = "closed"
 
