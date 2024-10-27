@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  wicket-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./src:/app/src
+      - ./target:/app/target
+      - ./pom.xml:/app/pom.xml
+      - maven-repo:/root/.m2
+    environment:
+      - CATALINA_OPTS=-Xmx512m
+      - JAVA_OPTS=-Dwicket.configuration=DEVELOPMENT
+    networks:
+      - wicket-network
+
+volumes:
+  maven-repo:
+
+networks:
+  wicket-network:
+    driver: bridge
