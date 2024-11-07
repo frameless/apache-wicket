@@ -1,0 +1,21 @@
+{
+  "name": "@gemeente-rotterdam/apache-wicket-components",
+  "version": "1.0.0",
+  "description": "## Getting started",
+  "main": "index.js",
+  "author": "",
+  "license": "EUPL-1.2",
+  "scripts": {
+    "build": "npm-run-all build:**",
+    "build:candidate": "cp node_modules/@nl-design-system-candidate/paragraph-css/dist/paragraph.css ./src/main/webapp/css/",
+    "build:theme": "cp node_modules/@gemeente-rotterdam/design-tokens/dist/theme.css ./src/main/webapp/css/",
+    "build:utrecht": "cp node_modules/@utrecht/component-library-css/dist/index.css ./src/main/webapp/css/"
+  },
+  "devDependencies": {
+    "@gemeente-rotterdam/design-tokens": "1.0.0-alpha.35",
+    "@nl-design-system-candidate/paragraph-css": "1.0.2",
+    "@utrecht/component-library-css": "^6.1.0",
+    "chokidar-cli": "^3.0.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

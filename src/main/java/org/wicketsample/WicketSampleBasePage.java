@@ -10,49 +10,15 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.link.Link;
+import org.apache.wicket.model.Model;
+
+import nl.utrecht.components.UtrechtButton;
 import jakarta.servlet.http.HttpServletRequest;
 
-/*
-import org.apache.directory.fortress.web.control.FtBookmarkablePageLink;
-import org.apache.directory.fortress.web.control.SecUtils;
-import org.apache.directory.fortress.core.AccessMgr;
-import org.apache.directory.fortress.realm.J2eePolicyMgr;
-import org.apache.wicket.spring.injection.annot.SpringBean;
-*/
-
-
-/**
- * Base class for wicketsample project.
- *
- * @author Shawn McKinney
- * @version $Rev$
- */
 public abstract class WicketSampleBasePage extends WebPage
 {
-    // TODO STEP: enable spring injection of fortress bean here:
-/*
-    @SpringBean
-    private AccessMgr accessMgr;
-    @SpringBean
-    private J2eePolicyMgr j2eePolicyMgr;
-*/
-
     public WicketSampleBasePage()
     {
-        // TODO STEP: uncomment call to enableFortress:
-/*
-        try
-        {
-            SecUtils.enableFortress( this, ( HttpServletRequest ) getRequest().getContainerRequest(), j2eePolicyMgr,
-                accessMgr );
-        }
-        catch (org.apache.directory.fortress.core.SecurityException se)
-        {
-            String error = "WicketSampleBasePage caught security exception : " + se;
-            LOG.warn( error );
-        }
-*/
-        // TODO STEP: change to FtBookmarkablePageLink:
         add( new BookmarkablePageLink( "wspage1.link", Page1.class ) );
         add( new BookmarkablePageLink( "wspage2.link", Page2.class ) );
         add( new BookmarkablePageLink( "wspage3.link", Page3.class ) );
@@ -65,7 +31,14 @@ public abstract class WicketSampleBasePage extends WebPage
             }
         };
         add( actionLink );
-        add( new Label( "footer", "© 2023 iamfortress.net" ) );
+        // add( new Label( "footer", "© 2023 iamfortress.net" ) );
+        add( new UtrechtButton( "footer", Model.of("Primary Action Button"), UtrechtButton.ButtonStyle.PRIMARY_ACTION) );
+        // add( new UtrechtButton( "footer2", Model.of("Secondary Action Button"), UtrechtButton.ButtonStyle.SECONDARY_ACTION) );
+        // add( new UtrechtButton( "footer3", Model.of("Subtle Button"), UtrechtButton.ButtonStyle.SUBTLE) );
+
+        // add( new UtrechtButton( "footer4", Model.of("Primary Action Button (disabled)")) );
+        // add( new UtrechtButton( "footer5", Model.of("Secondary Action Button (disabled)")) );
+        // add( new UtrechtButton( "footer6", Model.of("Subtle Button (disabled)")) );
     }
 
     /**
