@@ -1,4 +1,3 @@
-// UtrechtButton.java
 package nl.utrecht.components;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
