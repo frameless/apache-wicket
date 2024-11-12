@@ -1,0 +1,35 @@
+{
+  "name": "@gemeente-rotterdam/components-apache-wicket",
+  "version": "0.0.0",
+  "author": "Community for NL Design System",
+  "description": "Design system based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rotterdam-apache-wicket.git",
+    "directory": "."
+  },
+  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228",
+  "engines": {
+    "//": "Update @types/node when updating the node version here",
+    "node": "^20",
+    "pnpm": "^9"
+  },
+  "scripts": {
+    "build": "npm-run-all build:**",
+    "build:candidate": "cp node_modules/@nl-design-system-candidate/paragraph-css/dist/paragraph.css ./src/main/webapp/css/",
+    "build:theme": "cp node_modules/@gemeente-rotterdam/design-tokens/dist/theme.css ./src/main/webapp/css/",
+    "build:utrecht": "cp node_modules/@utrecht/component-library-css/dist/index.css ./src/main/webapp/css/"
+  },
+  "devDependencies": {
+    "@gemeente-rotterdam/design-tokens": "1.0.0-alpha.35",
+    "@nl-design-system-candidate/paragraph-css": "1.0.2",
+    "@utrecht/component-library-css": "6.1.0",
+    "chokidar-cli": "3.0.0",
+    "npm-run-all": "4.1.5"
+  }
+}
