@@ -7,6 +7,10 @@ WORKDIR /app
 
 RUN mkdir -p src/main/resources src/main/java src/main/webapp/login
 
+COPY pom-offline.xml pom.xml
+
+RUN mvn dependency:go-offline
+
 COPY pom.xml .
 
 RUN mvn dependency:go-offline
